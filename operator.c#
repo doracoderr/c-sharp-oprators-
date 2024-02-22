@@ -1,0 +1,163 @@
+using System;
+
+class operators
+{
+  static void Main()
+  {
+    Console.WriteLine(" PROGRAM USING ALL C# operator");
+    Console.WriteLine("");
+    
+      Console.WriteLine("ARITHMETIC operators");
+      Console.WriteLine("");
+    
+    int a=40;
+    int b=5;
+    
+    int  addition=a+b;
+      Console.WriteLine("Addition is :- {0}",addition);
+    
+    int subtraction =a-b;
+      Console.WriteLine("Subtraction is :- {0}",subtraction);
+    
+    int multiplication =a*b;
+      Console.WriteLine("Multiplication is :- {0}",multiplication);
+    
+    int division =a/b;
+      Console.WriteLine("Division is :- {0}",division);
+    
+    int modulus =a%b;
+      Console.WriteLine("Modulus is :- {0}",modulus);
+      
+      Console.WriteLine("");
+    
+      Console.WriteLine("RELATIONAL operator");
+      Console.WriteLine("");
+      
+      bool isLess =a<b;
+      Console.WriteLine($"Less than operator:- {isLess}");
+      
+      bool isGreaterThan=a>b;
+      Console.WriteLine($"Greater than operator :- {isGreaterThan}");
+      
+     bool isLessThanOrEqual =a<=b;
+     Console.WriteLine($"Less than or equal to operator:- {isLessThanOrEqual}");
+     
+     bool isGreaterThanOrEqual =a>=b;
+     Console.WriteLine($"Greater than or equal to operator :- {isGreaterThanOrEqual}");
+     
+     bool isEqual =a==b;
+     Console.WriteLine($"Equal to operator :- {isEqual}");
+     
+     bool isNotEqual =a!=b;
+     Console.WriteLine($"Not Equal to operator :- {isNotEqual}");
+     
+     Console.WriteLine("");
+     
+     Console.WriteLine("LOGICAL OPERATORS");
+     Console.WriteLine("");
+     
+     bool LogicalAnd=(a>100)&&(b<10);
+     Console.WriteLine($"Logical AND operator :- {LogicalAnd}");
+     
+     bool LogicalOr=(a>100)||(b<10);
+     Console.WriteLine($"Logical OR operator :- {LogicalOr}");
+     
+     bool LogicalNot=!(b<10);
+     Console.WriteLine($"Logical NOT operator :- {LogicalNot}");
+     
+     Console.WriteLine("");
+     
+     Console.WriteLine("ASSIGNMENT OPERATORS");
+     
+     Console.WriteLine("");
+     Console.WriteLine(" Hi! i am ASSIGNMENT '=' OPERATOR.You used me many times for assign the value.Thanks! ");
+     
+     Console.WriteLine("");
+     
+     Console.WriteLine("INCREMENT and DECREMENT OPERATOR");
+     Console.WriteLine("");
+     
+     int PRE_INCREMENT= ++a;
+     Console.WriteLine($"PRE-INCREMENT operator :- {PRE_INCREMENT}");
+     int POST_INCREMENT=b++;
+     Console.WriteLine($"POST-INCREMENT operator :- {POST_INCREMENT}");
+     int PRE_DECREMENT= --b;
+     int POST_DECREMENT= a--;
+     Console.WriteLine($"PRE_DECREMENT operator :- {PRE_DECREMENT}");
+     Console.WriteLine($"POST_DECREMENT operator :- {POST_DECREMENT}");
+   
+     Console.WriteLine("");
+   
+     Console.WriteLine("CONDITIONAL (Ternary) OPERATOR");
+     Console.WriteLine("");
+     int max = (a > b) ? a : b;
+     Console.WriteLine($"The maximum value is: {max}");
+     Console.WriteLine("");
+     
+     Console.WriteLine("BITWISE OPERATOR");
+     Console.WriteLine("");
+     
+     int BitwiseAnd=a&b;
+     int BitwiseOr=a|b;
+     int BitwiseXor=a^b;
+     int BitwiseNot=~b;
+     int rightshift=a>>3;
+     int leftshift=b<<3;
+     Console.WriteLine($"BITWISE AND operator :- {BitwiseAnd} ");
+     Console.WriteLine($"BITWISE OR operator :- {BitwiseOr}");
+     Console.WriteLine($"BITWISE XOR operator :- {BitwiseXor}");
+     Console.WriteLine($"BITWISE NOT :- {BitwiseNot}");
+     Console.WriteLine($"RIGHT SHIFT operator :- {rightshift}");
+     Console.WriteLine($"LEFT SHIFT operator :- {leftshift}");
+     
+     Console.WriteLine("");
+     
+     Console.WriteLine("SPECIAL OPERATOR");
+     Console.WriteLine("");
+    
+      object obj = "Hello";
+        if (obj is string)
+        {
+            string str = (string)obj;
+            Console.WriteLine($"'is' operator :- obj is a string: {str}");
+        }
+        
+        object anotherObj = "World";
+        string anotherStr = anotherObj as string;
+        Console.WriteLine($"'as' operator: Converted to string :- {anotherStr}");
+
+      int size = sizeof(int);
+        Console.WriteLine($"'sizeof' operator: Size of int: {size} bytes");
+        
+        int maxInt = int.MaxValue;
+
+try
+{
+    checked
+    {
+        int checkedResult = maxInt + 1; // Throws OverflowException
+        Console.WriteLine("This won't be reached.");
+    }
+}
+catch (OverflowException ex)
+{
+    Console.WriteLine($"Overflow Exception: {ex.Message}");
+}
+
+int maxint = int.MaxValue;
+
+unchecked
+{
+    int uncheckedResult = maxint + 1; // No exception, may result in overflow
+    Console.WriteLine($"Unchecked Result:-  {uncheckedResult}");
+}
+
+     
+     
+     
+    
+    
+    
+    
+  }
+}
